@@ -17,7 +17,8 @@
     <body>
     <h1> SIGN UP PAGE</h1>
     <div class="container bg-3">
-    <form action="" method="post">
+    <form action="http://127.0.0.1:8000/fsave/" method="post">
+        {% csrf_token %}
         NAME:<input type="text" name="t1">
         <br>
         USERNAME:<input type="text" name="t2">
