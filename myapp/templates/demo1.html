@@ -2,34 +2,54 @@
     <head>
         <title>my html</title>
         <style>
+            body{
+              background-color: rgb(238, 247, 161);
+            }
             h1{
                 text-align: center;
                 background-color: blue;
                 font-style: normal;
                 font-size: 70px;
+                margin-left: 300px;
+                margin-right: 300px;
             }
             .bg-3{
-              font-size: 30px;
-              font-style: italic;
+              font-size: 25px;
+              border: none;
+              padding-top: 20px;
+              border-radius: 5px;
+              background-color: beige;
+              padding-bottom: 20px;
+              margin-left: 300px;
+              margin-right: 300px;
+            }
+            .inpbtn{
+                width: 160px;
+                height: 35px;
+                font-weight: bold;
+                color: rgb(17, 16, 16);
             }
         </style>
     </head>
     <body>
+        <br><br>
     <h1> SIGN UP PAGE</h1>
     <div class="container bg-3">
     <form action="http://127.0.0.1:8000/fsave/" method="post">
         {% csrf_token %}
-        NAME:<input type="text" name="t1">
+        <center>
+        NAME:<input type="text"placeholder='enter a name' name="t1">
         <br>
-        USERNAME:<input type="text" name="t2">
+        USERNAME:<input type="text" placeholder="enter a surname" name="t2">
         <br>
-        PASSWORD:<input type="text" name="t3">
+        PASSWORD:<input type="text" placeholder="enter a password" name="t3">
         <br>
-        PHONENUMBER:<input type="text" name="t4">
+        PHONENUMBER:<input type="text" placeholder="enter a phonenumber" name="t4">
         <br>
-        PLACE:<input type="text" name="t5">
-        <br>
-        <input type="submit" value="submit">
+        PLACE:<input type="text" placeholder="enter your place" name="t5">
+        <br><br>
+        <input type="submit" value="submit" class="btn btn-primary inpbtn">
+        </center>
     </form>
     </div>
     </body>
